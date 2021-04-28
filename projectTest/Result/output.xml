@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.8.5 on win32)" generated="20210427 21:06:10.317" rpa="false" schemaversion="2">
+<suite id="s1" name="Project" source="C:\Users\sanjay\Desktop\mbscrap\projectTest\Test\project.robot">
+<kw name="Connect To Mongodb" library="MongoDBLibrary" type="SETUP">
+<arg>mongodb+srv://admin:admin@taskapp.bytgp.mongodb.net/</arg>
+<doc>Loads pymongo and connects to the MongoDB host using parameters submitted.</doc>
+<status status="PASS" starttime="20210427 21:06:11.806" endtime="20210427 21:06:12.007"/>
+</kw>
+<test id="s1-t1" name="open browser and login">
+<kw name="login" library="project">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210427 21:06:12.007" level="INFO">Opening browser 'firefox' to base url 'https://ikarya.metricbees.com/'.</msg>
+<msg timestamp="20210427 21:06:12.022" level="INFO">Firefox driver log is always forced to to: C:\Users\sanjay\Desktop\mbscrap\projectTest\Result\geckodriver-3.log</msg>
+<status status="PASS" starttime="20210427 21:06:12.007" endtime="20210427 21:06:44.467"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210427 21:06:44.467" endtime="20210427 21:06:44.752"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_FIELD}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:44.752" level="INFO">Typing text 'sanjayrupesh15@gmail.com' into text field 'css=#input-82'.</msg>
+<status status="PASS" starttime="20210427 21:06:44.752" endtime="20210427 21:06:44.899"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:44.915" level="INFO">Typing text '08112000' into text field 'css=#input-85'.</msg>
+<status status="PASS" starttime="20210427 21:06:44.899" endtime="20210427 21:06:44.997"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:44.997" level="INFO">Clicking button 'xpath=//*[@id="app"]/div/div/div/main/div/div/div/div/form/div/div[4]/div/button[1]'.</msg>
+<status status="PASS" starttime="20210427 21:06:44.997" endtime="20210427 21:06:45.316"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210427 21:06:48.362" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210427 21:06:45.316" endtime="20210427 21:06:48.362"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Open</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210427 21:06:48.362" endtime="20210427 21:06:48.393"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:12.007" endtime="20210427 21:06:48.393"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" starttime="20210427 21:06:12.007" endtime="20210427 21:06:48.393"/>
+</test>
+<test id="s1-t2" name="creating project">
+<kw name="creating project" library="project">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PROJECT_TAB_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:48.408" level="INFO">Clicking element 'xpath=//*[@id="app"]/div/div/div/div[2]/div/nav/div[1]/div/div/div[1]/div'.</msg>
+<status status="PASS" starttime="20210427 21:06:48.408" endtime="20210427 21:06:48.684"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${create_project}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:48.685" level="INFO">Clicking element 'xpath=//*[@id="app"]/div/div/div/div[2]/div/nav/div[1]/div/div/div[1]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20210427 21:06:48.684" endtime="20210427 21:06:49.467"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${group_field}</arg>
+<arg>${GROUP}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:49.467" level="INFO">Typing text 'Data' into text field 'xpath=//*[@id="input-161"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:49.467" endtime="20210427 21:06:49.667"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${group_field}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:49.667" level="INFO">Sending key(s) ('TAB',) to xpath=//*[@id="input-161"] element.</msg>
+<msg timestamp="20210427 21:06:49.999" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20210427 21:06:49.999" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:49.667" endtime="20210427 21:06:50.115"/>
+</kw>
+<for flavor="IN">
+<var>${ITEM1}</var>
+<value>@{FIELDS}</value>
+<iter>
+<var name="${ITEM1}">xpath=//*[@id="input-166"]</var>
+<for flavor="IN">
+<var>${ITEM2}</var>
+<value>@{VALUES}</value>
+<iter>
+<var name="${ITEM2}">Testingcomments</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ITEM1}</arg>
+<arg>${ITEM2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:50.115" level="INFO">Typing text 'Testingcomments' into text field 'xpath=//*[@id="input-166"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:50.115" endtime="20210427 21:06:50.330"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${NONE}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:50.333" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20210427 21:06:50.333" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20210427 21:06:50.333" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:50.331" endtime="20210427 21:06:50.417"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${Values}</arg>
+<arg>0</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" starttime="20210427 21:06:50.417" endtime="20210427 21:06:50.417"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20210427 21:06:50.417" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210427 21:06:50.417" endtime="20210427 21:06:50.417"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:50.115" endtime="20210427 21:06:50.417"/>
+</iter>
+<status status="PASS" starttime="20210427 21:06:50.115" endtime="20210427 21:06:50.417"/>
+</for>
+<status status="PASS" starttime="20210427 21:06:50.115" endtime="20210427 21:06:50.417"/>
+</iter>
+<iter>
+<var name="${ITEM1}">xpath=//*[@id="input-169"]</var>
+<for flavor="IN">
+<var>${ITEM2}</var>
+<value>@{VALUES}</value>
+<iter>
+<var name="${ITEM2}">Test</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ITEM1}</arg>
+<arg>${ITEM2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:50.417" level="INFO">Typing text 'Test' into text field 'xpath=//*[@id="input-169"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:50.417" endtime="20210427 21:06:50.527"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${NONE}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:50.527" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20210427 21:06:50.527" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20210427 21:06:50.527" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:50.527" endtime="20210427 21:06:50.632"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${Values}</arg>
+<arg>0</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" starttime="20210427 21:06:50.632" endtime="20210427 21:06:50.632"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20210427 21:06:50.632" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210427 21:06:50.632" endtime="20210427 21:06:50.632"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:50.417" endtime="20210427 21:06:50.632"/>
+</iter>
+<status status="PASS" starttime="20210427 21:06:50.417" endtime="20210427 21:06:50.632"/>
+</for>
+<status status="PASS" starttime="20210427 21:06:50.417" endtime="20210427 21:06:50.632"/>
+</iter>
+<iter>
+<var name="${ITEM1}">xpath=//*[@id="input-175"]</var>
+<for flavor="IN">
+<var>${ITEM2}</var>
+<value>@{VALUES}</value>
+<iter>
+<var name="${ITEM2}">This is for testing purpose 2</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ITEM1}</arg>
+<arg>${ITEM2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:50.632" level="INFO">Typing text 'This is for testing purpose 2' into text field 'xpath=//*[@id="input-175"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:50.632" endtime="20210427 21:06:50.829"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${NONE}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:50.829" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20210427 21:06:50.829" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20210427 21:06:50.829" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:50.829" endtime="20210427 21:06:50.885"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${Values}</arg>
+<arg>0</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" starttime="20210427 21:06:50.885" endtime="20210427 21:06:50.885"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20210427 21:06:50.885" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210427 21:06:50.885" endtime="20210427 21:06:50.885"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:50.632" endtime="20210427 21:06:50.885"/>
+</iter>
+<status status="PASS" starttime="20210427 21:06:50.632" endtime="20210427 21:06:50.885"/>
+</for>
+<status status="PASS" starttime="20210427 21:06:50.632" endtime="20210427 21:06:50.885"/>
+</iter>
+<iter>
+<var name="${ITEM1}">xpath=//*[@id="input-180"]</var>
+<for flavor="IN">
+<var>${ITEM2}</var>
+<value>@{VALUES}</value>
+<iter>
+<var name="${ITEM2}">sanjayrupesh15@gmail.com</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ITEM1}</arg>
+<arg>${ITEM2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:50.885" level="INFO">Typing text 'sanjayrupesh15@gmail.com' into text field 'xpath=//*[@id="input-180"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:50.885" endtime="20210427 21:06:51.070"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${NONE}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:51.086" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20210427 21:06:51.086" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20210427 21:06:51.086" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:51.070" endtime="20210427 21:06:51.172"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${Values}</arg>
+<arg>0</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" starttime="20210427 21:06:51.172" endtime="20210427 21:06:51.172"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20210427 21:06:51.172" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210427 21:06:51.172" endtime="20210427 21:06:51.172"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:50.885" endtime="20210427 21:06:51.172"/>
+</iter>
+<status status="PASS" starttime="20210427 21:06:50.885" endtime="20210427 21:06:51.172"/>
+</for>
+<status status="PASS" starttime="20210427 21:06:50.885" endtime="20210427 21:06:51.172"/>
+</iter>
+<iter>
+<var name="${ITEM1}">xpath=//*[@id="input-186"]</var>
+<for flavor="IN">
+<var>${ITEM2}</var>
+<value>@{VALUES}</value>
+<iter>
+<var name="${ITEM2}">sanjayrupesh15@gmail.com</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ITEM1}</arg>
+<arg>${ITEM2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:51.172" level="INFO">Typing text 'sanjayrupesh15@gmail.com' into text field 'xpath=//*[@id="input-186"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:51.172" endtime="20210427 21:06:51.271"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${NONE}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:51.286" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20210427 21:06:51.286" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20210427 21:06:51.286" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:51.286" endtime="20210427 21:06:51.402"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${Values}</arg>
+<arg>0</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" starttime="20210427 21:06:51.402" endtime="20210427 21:06:51.402"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20210427 21:06:51.402" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210427 21:06:51.402" endtime="20210427 21:06:51.402"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:51.172" endtime="20210427 21:06:51.402"/>
+</iter>
+<status status="PASS" starttime="20210427 21:06:51.172" endtime="20210427 21:06:51.402"/>
+</for>
+<status status="PASS" starttime="20210427 21:06:51.172" endtime="20210427 21:06:51.402"/>
+</iter>
+<iter>
+<var name="${ITEM1}">xpath=//*[@id="input-198"]</var>
+<for flavor="IN">
+<var>${ITEM2}</var>
+<value>@{VALUES}</value>
+<iter>
+<var name="${ITEM2}">High</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ITEM1}</arg>
+<arg>${ITEM2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:51.402" level="INFO">Typing text 'High' into text field 'xpath=//*[@id="input-198"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:51.402" endtime="20210427 21:06:51.502"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${NONE}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:51.502" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20210427 21:06:51.502" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20210427 21:06:51.502" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:51.502" endtime="20210427 21:06:51.604"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${Values}</arg>
+<arg>0</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" starttime="20210427 21:06:51.604" endtime="20210427 21:06:51.604"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20210427 21:06:51.604" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210427 21:06:51.604" endtime="20210427 21:06:51.604"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:51.402" endtime="20210427 21:06:51.604"/>
+</iter>
+<status status="PASS" starttime="20210427 21:06:51.402" endtime="20210427 21:06:51.604"/>
+</for>
+<status status="PASS" starttime="20210427 21:06:51.402" endtime="20210427 21:06:51.604"/>
+</iter>
+<iter>
+<var name="${ITEM1}">xpath=//*[@id="input-204"]</var>
+<for flavor="IN">
+<var>${ITEM2}</var>
+<value>@{VALUES}</value>
+<iter>
+<var name="${ITEM2}">should start after</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ITEM1}</arg>
+<arg>${ITEM2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:51.620" level="INFO">Typing text 'should start after' into text field 'xpath=//*[@id="input-204"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:51.604" endtime="20210427 21:06:51.703"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${NONE}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:51.703" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20210427 21:06:51.703" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20210427 21:06:51.703" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:51.703" endtime="20210427 21:06:51.819"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${Values}</arg>
+<arg>0</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" starttime="20210427 21:06:51.819" endtime="20210427 21:06:51.819"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20210427 21:06:51.819" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210427 21:06:51.819" endtime="20210427 21:06:51.819"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:51.604" endtime="20210427 21:06:51.819"/>
+</iter>
+<status status="PASS" starttime="20210427 21:06:51.604" endtime="20210427 21:06:51.819"/>
+</for>
+<status status="PASS" starttime="20210427 21:06:51.604" endtime="20210427 21:06:51.819"/>
+</iter>
+<iter>
+<var name="${ITEM1}">xpath=//*[@id="input-210"]</var>
+<for flavor="IN">
+<var>${ITEM2}</var>
+<value>@{VALUES}</value>
+<status status="PASS" starttime="20210427 21:06:51.819" endtime="20210427 21:06:51.819"/>
+</for>
+<status status="PASS" starttime="20210427 21:06:51.819" endtime="20210427 21:06:51.819"/>
+</iter>
+<status status="PASS" starttime="20210427 21:06:50.115" endtime="20210427 21:06:51.819"/>
+</for>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${due_by_field}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:51.819" level="INFO">Clicking button 'xpath=//*[@id="input-194"]'.</msg>
+<status status="PASS" starttime="20210427 21:06:51.819" endtime="20210427 21:06:52.289"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${DUE_BY}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:52.289" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[8]/div/div/div/div[2]/table/tbody/tr[4]/td[7]/button'.</msg>
+<status status="PASS" starttime="20210427 21:06:52.289" endtime="20210427 21:06:52.690"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${NONE}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210427 21:06:52.690" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20210427 21:06:52.690" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20210427 21:06:52.690" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210427 21:06:52.690" endtime="20210427 21:06:52.721"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${DUE_DATE}</var>
+<arg>xpath=//*[@id="input-194"]</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210427 21:06:52.737" level="INFO">${DUE_DATE} = 2021-04-24</msg>
+<status status="PASS" starttime="20210427 21:06:52.721" endtime="20210427 21:06:52.737"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${create_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210427 21:06:52.737" level="INFO">Clicking button 'xpath=//*[@id="app"]/div[1]/div/div/main/div/div/div/div[1]/div[1]/div/div[1]/div/div[7]/div/button'.</msg>
+<status status="PASS" starttime="20210427 21:06:52.737" endtime="20210427 21:06:53.215"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210427 21:06:58.227" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210427 21:06:53.215" endtime="20210427 21:06:58.227"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:48.393" endtime="20210427 21:06:58.229"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:48.393" endtime="20210427 21:06:58.230"/>
+</test>
+<test id="s1-t3" name="database data">
+<kw name="validating data with frontend values inserted" library="backend">
+<kw name="Retrieve Some Mongodb Records" library="MongoDBLibrary">
+<var>${DATA}</var>
+<arg>workflow</arg>
+<arg>projects</arg>
+<arg>{"client":"${CLIENT}","name":"${PROJECT_NAME}","desc":"${DESCRIPTION}"}</arg>
+<doc>Retrieve some of the records from a given MongoDB database collection
+based on the JSON entered.
+Returned value must be single quoted for comparison, otherwise you will
+get a TypeError error.</doc>
+<msg timestamp="20210427 21:06:59.013" level="INFO">${DATA} = dict_items([('_id', ObjectId('60882e0190b94400293e786b')), ('tasks', []), ('email', [[]]), ('attachments', []), ('uid', 'Data-102'), ('parentuid', 'Data-102'), ('name', 'Testingcomments'), ('client', ...</msg>
+<status status="PASS" starttime="20210427 21:06:58.262" endtime="20210427 21:06:59.013"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{DATA_SPLIT}</var>
+<arg>${DATA}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20210427 21:06:59.013" level="INFO">@{DATA_SPLIT} = [ dict_items([('_id', | ObjectId('60882e0190b94400293e786b')), | ('tasks', | []), | ('email', | [[]]), | ('attachments', | []), | ('uid', | 'Data-102'), | ('parentuid', | 'Data-102'), | ('name', | 'Te...</msg>
+<status status="PASS" starttime="20210427 21:06:59.013" endtime="20210427 21:06:59.013"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>@{DATA_SPLIT}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20210427 21:06:59.013" level="INFO">dict_items([('_id',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">ObjectId('60882e0190b94400293e786b')),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('tasks',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('email',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[[]]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('attachments',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('uid',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data-102'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('parentuid',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data-102'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('name',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Testingcomments'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('client',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Test'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('desc',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'This</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">is</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">for</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">testing</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">purpose</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">2'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('organiser',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'sanjayrupesh15@gmail.com'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('assignee',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'sanjayrupesh15@gmail.com'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('criticality',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'High'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('due',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'2021-04-24'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('links',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'should</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">start</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">after'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('linktask',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">''),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('comments',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('status',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'New'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('group',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('__v',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">0)])dict_items([('_id',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">ObjectId('60882e6e90b94400293e786c')),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('tasks',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('email',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[[]]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('attachments',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('uid',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data-103'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('parentuid',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data-103'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('name',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Testingcomments'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('client',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Test'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('desc',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'This</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">is</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">for</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">testing</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">purpose</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">2'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('organiser',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'sanjayrupesh15@gmail.com'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('assignee',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'sanjayrupesh15@gmail.com'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('criticality',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'High'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('due',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'2021-04-24'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('links',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'should</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">start</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">after'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('linktask',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">''),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('comments',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('status',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'New'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('group',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('__v',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">0)])dict_items([('_id',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">ObjectId('60882f9890b94400293e786d')),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('tasks',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('email',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[[]]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('attachments',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('uid',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data-104'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('parentuid',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data-104'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('name',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Testingcomments'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('client',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Test'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('desc',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'This</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">is</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">for</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">testing</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">purpose</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">2'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('organiser',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'sanjayrupesh15@gmail.com'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('assignee',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'sanjayrupesh15@gmail.com'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('criticality',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'High'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('due',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'2021-04-24'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('links',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'should</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">start</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">after'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('linktask',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">''),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('comments',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">[]),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('status',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'New'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('group',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">'Data'),</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">('__v',</msg>
+<msg timestamp="20210427 21:06:59.013" level="INFO">0)])</msg>
+<status status="PASS" starttime="20210427 21:06:59.013" endtime="20210427 21:06:59.013"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${BACKEND_PROJECT_NAME}</var>
+<arg>${DATA_SPLIT}</arg>
+<arg>13</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20210427 21:06:59.013" level="INFO">${BACKEND_PROJECT_NAME} = 'Testingcomments'),</msg>
+<status status="PASS" starttime="20210427 21:06:59.013" endtime="20210427 21:06:59.013"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${BACKEND_CLIENT_NAME}</var>
+<arg>${DATA_SPLIT}</arg>
+<arg>15</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20210427 21:06:59.013" level="INFO">${BACKEND_CLIENT_NAME} = 'Test'),</msg>
+<status status="PASS" starttime="20210427 21:06:59.013" endtime="20210427 21:06:59.013"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${BACKEND_GROUP_NAME}</var>
+<arg>${DATA_SPLIT}</arg>
+<arg>-3</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20210427 21:06:59.013" level="INFO">${BACKEND_GROUP_NAME} = 'Data'),</msg>
+<status status="PASS" starttime="20210427 21:06:59.013" endtime="20210427 21:06:59.013"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${BACKEND_PROJECT_NAME}</arg>
+<arg>${PROJECT_NAME}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20210427 21:06:59.013" endtime="20210427 21:06:59.013"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${BACKEND_PROJECT_NAME}</arg>
+<arg>${CLIENT}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20210427 21:06:59.013" endtime="20210427 21:06:59.013"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${BACKEND_GROUP_NAME}</arg>
+<arg>${GROUP}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20210427 21:06:59.029" endtime="20210427 21:06:59.029"/>
+</kw>
+<status status="PASS" starttime="20210427 21:06:58.262" endtime="20210427 21:06:59.029"/>
+</kw>
+<tag>Backend</tag>
+<status status="PASS" starttime="20210427 21:06:58.262" endtime="20210427 21:06:59.029"/>
+</test>
+<test id="s1-t4" name="commenting">
+<kw name="adding comment" library="project">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210427 21:07:09.030" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210427 21:06:59.029" endtime="20210427 21:07:09.030"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>css=#ssIFrame_google</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20210427 21:07:09.030" level="INFO">Selecting frame 'css=#ssIFrame_google'.</msg>
+<status status="PASS" starttime="20210427 21:07:09.030" endtime="20210427 21:07:09.075"/>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<arg>css=.v-tabs</arg>
+<arg>1103</arg>
+<arg>301</arg>
+<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
+<msg timestamp="20210427 21:07:09.075" level="INFO">Clicking element 'css=.v-tabs' at coordinates x=1103, y=301.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210427 21:07:09.334" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210427 21:07:09.075" endtime="20210427 21:07:09.334"/>
+</kw>
+<msg timestamp="20210427 21:07:09.418" level="FAIL">Element with locator 'css=.v-tabs' not found.</msg>
+<status status="FAIL" starttime="20210427 21:07:09.075" endtime="20210427 21:07:09.418"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${COMMENT_FIELD}</var>
+<arg>css=div.v-tab:nth-child(4)</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20210427 21:07:09.418" endtime="20210427 21:07:09.418"/>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<arg>${COMMENT_FIELD}</arg>
+<arg>119</arg>
+<arg>48</arg>
+<doc>Click the element ``locator`` at ``xoffset/yoffset``.</doc>
+<status status="NOT RUN" starttime="20210427 21:07:09.418" endtime="20210427 21:07:09.418"/>
+</kw>
+<status status="FAIL" starttime="20210427 21:06:59.029" endtime="20210427 21:07:09.418"/>
+</kw>
+<status status="FAIL" starttime="20210427 21:06:59.029" endtime="20210427 21:07:09.418">Element with locator 'css=.v-tabs' not found.</status>
+</test>
+<kw name="Disconnect From Mongodb" library="MongoDBLibrary" type="TEARDOWN">
+<doc>Disconnects from the MongoDB server.</doc>
+<status status="PASS" starttime="20210427 21:07:09.418" endtime="20210427 21:07:09.466"/>
+</kw>
+<status status="FAIL" starttime="20210427 21:06:10.340" endtime="20210427 21:07:09.466"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Backend</stat>
+<stat pass="1" fail="0" skip="0">Login</stat>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Project">Project</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
